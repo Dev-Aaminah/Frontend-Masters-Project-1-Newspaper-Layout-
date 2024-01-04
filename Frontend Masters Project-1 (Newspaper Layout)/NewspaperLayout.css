@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+.title-of-the-page{
+    text-align: center;
+    font-family: "Times New Roman", cursive;
+    padding: 10px;
+    font-size: 50px;
+    font-weight: normal;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 30px;
+    border: 3px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+.site-section{
+    color: grey;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none; /* Remove underlines */
+}
+.site-section:hover{
+    text-decoration: underline;
+}
+.story-here {
+    display: grid;
+    grid-template-areas:
+        "story1 story2 story3"
+        "story4 story5 story5";
+    }
+    .story5 {
+        grid-column: span 2; /* Make story5 span two columns */
+    }
+.story1, .story2, .story3, .story4, .story5 {
+    border: 3px solid black;
+    text-align: center;
+}
+/* Adjust for overlapping borders */
+.story1 + .story2,
+.story2 + .story3,
+.story4 + .story5
+{
+  border-left-width: 0; /* Remove left border for adjacent articles */
+}
+.story1 + .story2 , .story3 
+{
+  border-bottom-width: 0; /* Remove left border for adjacent articles */
+}
+.story1
+{
+  border-bottom-width: 0; /* Remove left border for adjacent articles */
+}
+
+.nav-bar {
+    border-bottom-width: 0;
+}
+.article-title{
+    font-style: italic;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 30px;
+}
